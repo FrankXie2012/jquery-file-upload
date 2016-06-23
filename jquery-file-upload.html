@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<link rel="stylesheet" href="bower_components/semantic/dist/semantic.min.css">
+	<style>
+		.upload{ clear: both; padding: 10px; height: 75px; }
+		.upload #fileupload{ display: none; }
+		.ui.progress{ width: 100%; margin: 0 !important; }
+		.upload-details{ background-color: #fafafa; padding: 10px !important; border: 1px solid #ddd; }
+		.upload-details > div{ text-align: center; }
+		.file-preview{ width: 100px; height: 100px; }
+		.file-name{ margin-right: 20px; }
+		.upload-table{ width: 100%; text-align: center; margin-top: 10px; }
+		.upload-table td{ padding: 10px 0; }
+		.bar .percents{ height: 25px; line-height: 25px; }
+	</style>
+</head>
+<body>
+<div class="upload">
+	<button class="ui blue button">上传文件</button>
+	<input id="fileupload" type="file" name="files[]" multiple />
+	<table class="upload-table"></table>
+</div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+<script src="bower_components/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+<script src="bower_components/blueimp-file-upload/js/jquery.fileupload.js"></script>
+<script src="bower_components/semantic/dist/semantic.min.js"></script>
+<script src="file-upload.js"></script>
+<script type="text/javascript">
+$('.upload button').uploadFile({
+	url: '//jquery-file-upload.appspot.com/',
+	dataType: 'json',
+	maxFileSize: 10000000,
+	add: function(){
+		console.info('添加文件回调函数');
+	},
+	done: function(){
+		console.info('上传文件回调函数');
+	}
+});
+</script>
+</body>
+</html>

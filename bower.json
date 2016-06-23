@@ -1,0 +1,20 @@
+{
+  "name": "jquery-file-upload",
+  "authors": [
+    "Frank Shieh <fr6nkxie@gmail.com>"
+  ],
+  "description": "A demo for file upload.",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "semantic": "semantic-ui#^2.1.8",
+    "blueimp-file-upload": "jquery-file-upload#^9.12.5"
+  }
+}
