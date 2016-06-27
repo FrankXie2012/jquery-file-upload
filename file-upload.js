@@ -48,7 +48,7 @@
         _clicks = 0;
         $(this).click(function(){
             _clicks += 1;
-            $(this).siblings('#fileupload').trigger('click').fileupload({
+            $(this).siblings('input[type="file"]').trigger('click').fileupload({
                 url: options.url,
                 dataType: options.dataType || 'json',
                 maxFileSize: options.maxFileSize || 100000000,
@@ -115,6 +115,7 @@
                 },
                 // 显示进度条
                 progressall: function (e, data) {
+                    console.log(data.loaded)
                     var progress = parseInt(data.loaded / data.total * 100, 10);
                     $('#line' + _clicks + ' .progress .bar').css({'width': progress + '%'});
                     $('#line' + _clicks + ' .progress .bar .percents').text(progress + '%');

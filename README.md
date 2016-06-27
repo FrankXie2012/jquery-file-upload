@@ -1,6 +1,9 @@
 # jquery-file-upload
 > jquery-file-upload上传插件与semantic-ui结合
 
+## API网址
+[https://github.com/blueimp/jQuery-File-Upload](https://github.com/blueimp/jQuery-File-Upload)
+
 ## 简单教程
 *引入css和js文件*
 
